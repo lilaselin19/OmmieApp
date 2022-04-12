@@ -5,6 +5,9 @@ workflows:
       flutter: stable
       xcode: latest
       cocoapods: default
+    triggering:
+      events: # List the events that trigger builds
+        - push
     scripts:
       - |
         # set up debug keystore

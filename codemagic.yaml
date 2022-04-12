@@ -8,6 +8,10 @@ workflows:
     triggering:
       events: # List the events that trigger builds
         - push
+      branch_patterns: # Include or exclude watched branches
+        - pattern: '*'
+          include: true
+          source: true
     scripts:
       - |
         # set up debug keystore

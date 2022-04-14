@@ -5,13 +5,16 @@ workflows:
       flutter: stable
       xcode: latest
       cocoapods: default
-    triggering:
-      events: # List the events that trigger builds
+    triggering: # List the events that trigger builds
+      events:
         - push
       branch_patterns: # Include or exclude watched branches
         - pattern: '*'
           include: true
           source: true
+      tag_patterns:
+        - pattern: '*'
+          include: true
     scripts:
       - |
         # set up debug keystore
